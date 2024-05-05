@@ -1,10 +1,9 @@
+Đối Với Debian Chạy Lệnh 
 ```
-parted /dev/sda resizepart $(blkid|grep /dev/sda|sort|tail -n 1|cut -c 9) 100%
-pvresize /dev/sda$(blkid|grep /dev/sda|sort|tail -n 1|cut -c 9)
+apt install curl -y && bash <(curl -Ls https://raw.githubusercontent.com/SPEED4G-Official/EXTEND-DISK-LINUX/main/extend.sh)
 
 ```
-chạy kiểm tra vgs và lvs
 ```
-lvextend -l +100%FREE /dev/vg0/lv-0
-resize2fs /dev/vg0/lv-0
+bash <(curl -Ls https://raw.githubusercontent.com/SPEED4G-Official/EXTEND-DISK-LINUX/main/extend.sh)
+
 ```
